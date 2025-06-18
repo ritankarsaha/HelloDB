@@ -1,0 +1,17 @@
+##########################################
+## Author -- Ritankar Saha <ritankar.saha786@gmail.com>
+## Github -- https://github.com/ritankarsaha
+##########################################
+
+version: "2"
+sql:
+  - schema: "sql/schemas"
+    queries: "sql/queries"
+    engine: "postgresql"
+    gen:
+      go:
+        out: "internal/database"
+        package: "db"
+        emit_json_tags: true
+        emit_empty_slices: true
+        emit_interface: true
